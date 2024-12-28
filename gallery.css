@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s;
+}
+
+:root {
+    --bg-color: #17153B;
+    --text-color: white;
+    --circle-bg: #2E236C;
+    --circle-shadow: rgba(46, 35, 108, 0.5);
+    --primary-color: #433D8B;
+    --secondary-color: #C8ACD6;
+    --icon-fill:white;
+}
+
+body.light-mode {
+    --bg-color:#EEEEEE;
+    --text-color: #201E43;
+    --circle-bg: #134B70;
+    --circle-shadow: #508C9B;
+    --primary-color: #134B70;
+    --secondary-color: #201E43;
+    --icon-fill: #201E43;
+    
+}
+
+input[type="checkbox"]:checked ~ body {
+    --bg-color: #fdf2fd;
+    --text-color: #7E60BF;
+    --circle-bg: #E4B1F0;
+    --circle-shadow: rgba(228, 177, 240, 0.5);
+    --primary-color: #7E60BF;
+    --secondary-color: #E4B1F0;
+}
+
+input[type="checkbox"]:checked + label .circle {
+    left: 100%;
+    transform: translateX(-110%);
+    transition: left 0.3s ease, transform 0.3s ease;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+.icon1{
+    transition:opacity 0.3s ease ;
+    opacity: 1;
+}
+.logo:hover {
+    transform: scale(1);
+}
+
+
+
+nav a {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+label {
+    position: relative; 
+    top: 49%;
+    right:45%;
+    width: 100px;
+    height: 60px;
+    border-radius: 999px;
+    background: var(--secondary-color);
+    box-shadow: 10px 10px 30px var(--secondary-color) inset;
+    cursor: pointer;
+}
+
+.circle {
+    position: absolute; 
+    width: 50px;
+    height: 50px;
+    border-radius: 99px;
+    background: var(--circle-bg);
+    box-shadow: 10px 10px 20px var(--circle-shadow), -10px -10px 30px var(--circle-shadow) inset;
+    top: 50%;
+    left: 0%;
+    transform: translate(10%, -50%);
+    transition: left 0.3s ease, transform 0.3s ease;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+
+
+
+input[type="checkbox"] {
+    display: none;
+}
+
+label .circle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: var(--circle-bg);
+    border-radius: 50%;
+    transition: left 0.3s ease, transform 0.3s ease;
+    top: 5px;
+    left: 5px;
+    box-shadow: 0 0 10px var(--circle-shadow);
+}
+
+
+
+
+input[type="checkbox"]:checked + label {
+    background: var(--primary-color);
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  nav li{
+    height: 50px;
+    margin-top: 13px;
+    
+  }
+
+  .sidebar{
+    position: fixed;
+    top: 0; 
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .sidebar li{
+    width: 100%;
+  }
+  .sidebar a{
+    width: 100%;
+  }
+  .menu-button{
+    display: none;
+    
+  }
+  @media(max-width: 900px){
+    .hideOnMobile{
+      display: none;
+    }
+    .menu-button{
+      display: block;
+      
+    }
+    .place{
+        position: relative;
+        top: 30px;
+
+    }
+    .icon1{
+    fill: var(--icon-fill);
+    }
+
+    .logo {
+        opacity: 1; 
+      }
+    .icon1{
+        opacity: 1;
+    }
+    
+  }
+  @media(max-width: 400px){
+    .sidebar{
+      width: 70%;
+    }
+  }
+
+  body h1 {
+    font-size: 3rem;
+    position: absolute;
+    top: 30%;
+    right: 50%;
+    transform: translate(50%,50%);
+}
+
+@media (max-width: 900px) {
+     h1 {
+        font-size: 0.1rem;
+    }
+}
+
+.toggle-fix{
+    position:absolute;
+    top: 67.3%;
+    left: 38.5%;
+    transform: translate(50%,50%);
+}
