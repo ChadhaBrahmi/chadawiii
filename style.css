@@ -304,7 +304,7 @@ input[type="checkbox"]:checked + label {
         box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
         top: -100%; 
         margin-top: -30vh; 
-       left: 80%; 
+       left: 100%; 
       transform: translate(-50%, 0); 
       border-radius: 250px;
       overflow: hidden;
