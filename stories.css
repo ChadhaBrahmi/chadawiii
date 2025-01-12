@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 * {
@@ -93,9 +92,7 @@ header {
     transform: scale(1);
 }
 
-.image2{
-    display: none;
-}
+
 
 nav a {
     font-size: 1.8rem;
@@ -114,77 +111,11 @@ nav a.active {
 
 
 
-section {
-    min-height: 100vh;
-    padding: 5rem 9% 5rem;
-}
 
-.home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8rem;
-    background-color: var(--bg-color);
-}
 
-.home .home-content h1 {
-    font-size: 6rem;
-    font-weight: 700;
-    line-height: 1.3;
-}
 
-span {
-    font-size: 5rem;
-    color: var(--text-color);
-     font-weight: bold;
-}
 
-.home-content h3 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
 
-.home-content p {
-    font-size: 1.6rem;
-    position: relative;
-    top: 15px;
-}
-
-.home-img {
-    border-radius: 50%;
-}
-
-.home-img img {
-    position: relative;
-    width: 32vw;
-    border-radius: 50%;
-    box-shadow: 0 0 25px var(--primary-color);
-    cursor: pointer;
-    transition: 0.2s linear;
-}
-
-.social-icons a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    background-color: transparent;
-    border: 0.2rem solid var(--primary-color);
-    font-size: 2rem;
-    border-radius: 50%;
-    margin: 3rem 1.5rem 3rem 0;
-    transition: 0.3s ease;
-    color: var(--primary-color);
-}
-
-.social-icons a:hover {
-    color: var(--secondary-color);
-    transform: scale(1.3) translateY(-5px);
-    background-color: var(--primary-color);
-    box-shadow: 0 0 25px var(--primary-color);
-}
 
 .display {
     display: flex;
@@ -213,7 +144,7 @@ label {
     background: var(--circle-bg);
     box-shadow: 10px 10px 20px var(--circle-shadow), -10px -10px 30px var(--circle-shadow) inset;
     top: 50%;
-    left: 0%;
+    left: 0;
     transform: translate(10%, -50%);
     transition: left 0.3s ease, transform 0.3s ease;
 }
@@ -247,73 +178,6 @@ label .circle {
 input[type="checkbox"]:checked + label {
     background: var(--primary-color);
 }
-
-.home-img{
-    border-radius: 50%;
-}
-
-.home-img img{
-    position: relative;
-    width: 25vw;
-    border-radius: 50%;
-    box-shadow: 0 0 25px solid #433D8B;
-    cursor: pointer;
-    transition: 0.2s linear;
-    margin-top: 50px;
-}
-
-.home-img img:hover{
-    font-size: 1.8rem;
-    font-weight: 500;
-}
-
-@media (max-width: 1000px){
-    .home{
-        gap: 4rem;
-    }
-    
-}
-
-.image2 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-@media(max-width:900px){
-    .home{
-        flex-direction: column;
-        margin: 5rem 4rem;
-    }
-
-    .home .home-content h3{
-        font-size: 2.5rem;
-    }
-
-    .home-content h1{
-        font-size: 5rem;
-    }
-    .home-img{
-        display: none;
-    }
-    .image2{
-        display: flex;
-        width: 80vh;            
-        height: 80vh;              
-        object-fit: cover;       
-        position: relative;
-        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
-        top: -100%; 
-        margin-top: -30vh; 
-       left: 100%; 
-      transform: translate(-50%, 0); 
-      border-radius: 250px;
-      overflow: hidden;
-    }
- 
-
-}
-
 
 nav ul{
     width: 100%;
@@ -376,12 +240,164 @@ nav ul{
     .icon1{
         opacity: 1;
     }
-    span{
-        font-size: 3.5rem;
-    }
+    
   }
   @media(max-width: 400px){
     .sidebar{
       width: 70%;
     }
   }
+
+  
+
+@media (max-width: 900px) {
+     h1 {
+        font-size: 0.1rem;
+    }
+}
+
+.toggle-fix{
+    position:absolute;
+    top: 89%;
+    left: 38.5%;
+    transform: translate(50%,50%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1250px;
+    margin: 150px auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card-list .card-item {
+    background: var(--text-color);
+    padding: 26px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border 0.5s ease;
+}
+
+.card-list .card-item:hover {
+    border: 2px solid var(--circle-bg);
+}
+
+.card-list .card-item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card-list span {
+    display: inline-block;
+    background: #F7DFF5;
+    margin-top: 32px;
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.card-list .developer {
+    background-color: #F7DFF5; 
+    color: #B22485;
+}   
+
+.card-list .designer {
+    background-color: #d1e8ff;
+    color: #2968a8;
+}
+
+.card-list .editor {
+    background-color: #d6f8d6; 
+    color: #205c20;
+}
+
+.card-item h3 {
+    color: var(--bg-color);
+    font-size: 1.438rem;
+    margin-top: 28px;
+    font-weight: 600;
+}
+
+.card-item .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-35deg);
+    height: 40px;
+    width: 40px;
+    color: var(--bg-color);
+    border: 1px solid var(--bg-color);
+    border-radius: 50%;
+    margin-top: 40px;
+    transition: 0.2s ease;
+}
+
+.card-list .card-item:hover .arrow  {
+    background: var(--secondary-color);
+    color: var(--primary-color); 
+}
+
+.voting{
+    position: relative;
+    border: 3px solid var(--bg-color);
+    border-radius: 4px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+input{
+    width: 50px;
+    border: none;
+    background: none;
+    color: var(--text-color);
+    font-size: 30px;
+    margin: 0 10px;
+    pointer-events: none;
+
+}
+
+button{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: none;
+    font-size: 30px;
+    padding: 0 15px;
+    margin: 10px 0;
+    margin-left: 20px;
+    cursor: pointer;
+
+}
+button:active{
+    color: var(--circle-bg);
+    transform: scale(1.2);
+
+}
+
+@media (max-width: 1200px) {
+    .card-list .card-item {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .card-list {
+        margin: 70px auto;
+    }
+    .toggle-fix{
+        position:absolute;
+        top: 192%;
+        transform: translate(50%,50%);
+    }
+}
