@@ -29,7 +29,48 @@
         </nav>
     </header>
 
-    <h1>NOT PUBLISHED YET</h1>
+    <div class="card-list">
+        <a  href="the bezon.pdf" target="_blank" class="card-item">
+            <img src="the bezon.png" alt="Card Image">
+            <span class="developer">Part one</span>
+            <h3>Click here to download the Pdf file.</h3>
+            
+            <div  class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div>
+           
+        </a>
+
+        
+        <a href="#" class="card-item">
+            <img src="the bezon.png" alt="Card Image">
+            <span class="designer">Part two</span>
+            <h3>Not published yet.</h3>
+            <div class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div>
+        </a>
+        <a href="#" class="card-item">
+            <img src="the bezon.png" alt="Card Image">
+            <span class="editor">Part three</span>
+            <h3>Not published yet.</h3>
+            <div class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div>
+        </a>
+    </div>
+
+    <div class="voting">
+        <button id="likebtn">
+            <i class="fa-solid fa-thumbs-up"></i>
+        </button>
+        <input type="number"  id="input1" value="0">
+
+        <button id="dislikebtn">
+            <i class="fa-solid fa-thumbs-down"></i>
+        </button>
+        <input type="number"  id="input2" value="0">
+    </div>
 
         <div class="toggle-fix">
             <input type="checkbox" id="theme-toggle">
@@ -42,5 +83,31 @@
          </div>
     
     <script src="home.js"></script>
+    <script>
+       let likebtn = document.querySelector('#likebtn');
+let dislikebtn = document.querySelector('#dislikebtn');
+let input1 = document.querySelector('#input1');
+let input2 = document.querySelector('#input2');
+
+
+window.onload = () => {
+    input1.value = localStorage.getItem('likeCount') || 0;
+    input2.value = localStorage.getItem('dislikeCount') || 0;
+};
+
+likebtn.addEventListener('click', () => {
+    input1.value = parseInt(input1.value) + 1;
+    localStorage.setItem('likeCount', input1.value); 
+});
+
+dislikebtn.addEventListener('click', () => {
+    input2.value = parseInt(input2.value) + 1;
+    localStorage.setItem('dislikeCount', input2.value);
+});
+
+        
+
+        
+    </script>
 </body>
 </html>
